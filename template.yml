@@ -9,6 +9,9 @@ Resources:
       KeyName: ansible-udacity
       ImageId: 'ami-0e472ba40eb589f49'
       InstanceType: t2.micro
+      Tags:
+        - Key: name
+          Value: Project:udacity
 
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
