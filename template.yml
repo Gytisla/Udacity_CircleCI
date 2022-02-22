@@ -16,14 +16,14 @@ Resources:
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
-      GroupDescription: Enable http
+      GroupDescription: Allow access to express server
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: '3000'
+          ToPort: '3000'
           CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: '3000'
+          ToPort: '3000'
           CidrIp: 0.0.0.0/0
